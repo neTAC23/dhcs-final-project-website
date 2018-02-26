@@ -1,43 +1,25 @@
 
 <h2>ענן שמות</h2>
-<img src="names_bag.png">
-<h2>שמות נפוצים בחלוקה לשנים</h2>
 <div class="timeline">
-  <div class="container left">
+<div *ngFor="let key of keys;let i =index">
+ <span *ngIf="i%2==0"> 
+   <div class="container left">
     <div class="content">
-      <h4>2017</h4>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+      <h4>{{key}}</h4>
+      <p>{{names[key]}}</p>
     </div>
-  </div>
-  <div class="container right">
+   </div>
+ </span>
+  <span *ngIf="i%2!=0"> 
+    <div class="container right">
     <div class="content">
-      <h2>2016</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+      <h2>{{key}}</h2>
+      <p>{{names[key]}}</p>
     </div>
-  </div>
-  <div class="container left">
-    <div class="content">
-      <h2>2015</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>2012</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-    </div>
-  </div>
-  <div class="container left">
-    <div class="content">
-      <h2>2011</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>2007</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-    </div>
-  </div>
+   </div>
+  </span>
+</div>
 </div>
 
+<img src="names_bag.png">
+<h2>שמות נפוצים בחלוקה לשנים</h2>

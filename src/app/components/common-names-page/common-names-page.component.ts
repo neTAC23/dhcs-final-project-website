@@ -16,12 +16,15 @@ interface MyObj {
   styleUrls: ['./common-names-page.component.css']
 })
 export class CommonNamesPageComponent implements OnInit {
-  public name;
+  public names;
+  public keys;
   constructor(private http: Http) {
     this.getJSON().subscribe(
       data => {
-       //data contains the json.
-       console.log(data[1997][2][0]);
+       //data contains the json.\
+       this.names = data;
+       console.log(data);
+       this.keys = Object.keys(this.names).reverse();
       }, 
       error => console.log(error)
     );
@@ -34,8 +37,10 @@ export class CommonNamesPageComponent implements OnInit {
 
   }
 
+ 
+
   public getJSON(): Observable<any> {
-     let json = '../../../top_names.json'
+     let json = '../../../json_data/top_names.json'
          return this.http.get(json)
                          .map((res:any) => res.json());
 
