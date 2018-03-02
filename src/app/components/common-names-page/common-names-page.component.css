@@ -17,6 +17,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     background-color: lightblue;
+    right: 25%;
+
 }
 
 /* The actual timeline (the vertical ruler) */

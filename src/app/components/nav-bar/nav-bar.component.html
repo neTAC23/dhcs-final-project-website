@@ -4,30 +4,37 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="חפש שם..">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    
     <ul class="nav navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">כל השמות</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">מי שר על מי?</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">גברים לעומת נשים</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">שמות מהתנ"ך לעומת שמות מודרניים</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/common">הנפוצים ביותר</a>
-      </li>
       <li class="nav-item active">
         <a class="nav-link" routerLink="/">בית <span class="sr-only">(current)</span></a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="all-names">כל השמות</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/common">הנפוצים ביותר</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/men-vs-women">גברים לעומת נשים</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/bible">שמות מהתנ"ך לעומת שמות מודרניים</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="sing-about">מי שר על מי?</a>
+      </li>
+      
     </ul>
-    
+    <form class="form-inline my-2 my-lg-0" role="search">
+      <input class="form-control mr-sm-2" type="text" [(ngModel)]="query" name="query" placeholder="חפש שם..">
+      <button class="btn" routerLink='/search/{{query}}' type="input">
+        Search
+      </button>
+    </form>
   </div>
 </nav>
